@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+
+header {
+  text-align: center;
+  border-bottom: black 1px solid;
+}
+
+#first {
+  border: solid 1px black;
+}
+
+#second {
+  border: solid 1px black;
+}
+
+/* section {
+  display: flex;
+  flex-wrap: wrap;
+} */
+p {
+  max-width: 640px;
+  gap: 5px;
+  padding: 5px;
+}
+h3 {
+  padding: 5px;
+}
+
+section {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}
+main {
+  margin: 15px;
+}
+footer {
+  text-align: center;
+  border-top: black 1px solid;
+  margin: 0px;
+}
