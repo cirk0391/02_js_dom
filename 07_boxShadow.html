@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .shadow {
+        box-shadow: 10px 11px 21px 0px rgba(58, 255, 125, 0.75);
+      }
+    </style>
+    <title>07</title>
+  </head>
+  <body>
+    <header><h1>Titel</h1></header>
+    <main>
+      <h2>Undertitel</h2>
+      <section>
+        <article id="first">
+          <img src="https://placeimg.com/640/480/animals" alt="animals1" />
+          <h3>Artikel 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In culpa et
+            officiis error dolorum commodi possimus, tempore voluptatem quia
+            accusamus quod reiciendis iste cupiditate amet repellat ratione
+            soluta? Quas, consequatur.
+          </p>
+        </article>
+        <article id="second">
+          <img src="https://placeimg.com/640/480/animals" alt="animals2" />
+          <h3>Artikel 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+            voluptates? Inventore et molestiae aspernatur impedit recusandae
+            delectus maiores expedita adipisci rerum quisquam ab optio at,
+            corrupti alias repellendus ipsum mollitia!
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>is the footer</p>
+    </footer>
+    <script>
+      const headtitel = document.querySelector("header h1");
+      const undertitel = document.querySelector("h2");
+      const artikel1 = document.querySelector("article:first-child");
+      const billede1 = document.querySelector("article:first-child img");
+      const h3first = document.querySelector("article:first-child h3");
+      const pfirst = document.querySelector("article:first-child p");
+      const artikel2 = document.querySelector("article:nth-child(2)");
+      const billede2 = document.querySelector("article:nth-child(2) img");
+      const h3second = document.querySelector("article:nth-child(2) h3");
+      const psecond = document.querySelector("article:nth-child(2) p");
+
+      console.log(headtitel);
+      console.log(undertitel);
+      console.log(artikel1);
+      console.log(billede1);
+      console.log(h3first);
+      console.log(pfirst);
+      console.log(artikel2);
+      console.log(billede2);
+      console.log(h3second);
+      console.log(psecond);
+
+      headtitel.textContent = "noget nyt";
+
+      pfirst.innerHTML = "<b> ny artikel </b>";
+
+      billede1.src = "https://placeimg.com/640/480/nature";
+      billede1.alt = "natur";
+
+      let mainSection = document.querySelector("section");
+
+      let newArticle = document.createElement("article");
+      let overskrift = document.createElement("h3");
+      let overskriftText = document.createTextNode("Article 3");
+      overskrift.appendChild(overskriftText);
+      newArticle.appendChild(overskrift);
+
+      mainSection.appendChild(newArticle);
+
+      document.addEventListener("DOMContentLoaded", start);
+
+      function start() {
+        console.log("start");
+      }
+
+      let myRand;
+
+      myRand = Math.floor(Math.random() * 5) + 1;
+
+      billede1.addEventListener("click", skift);
+
+      function skift() {
+        billede1.src = "https://placeimg.com/640/480/nature" + 2;
+        console.log("skift");
+      }
+
+      let htmlElement = document.querySelector("article");
+      document.querySelector("article").addEventListener("mouseover", shadowOn);
+      document.querySelector("article").addEventListener("mouseout", shadowOn);
+
+      function shadowOn() {
+        htmlElement.classList.toggle("shadow");
+        console.log(shadowOn);
+      }
+
+      function shadowOff() {
+        htmlElement.classList.toggle("shadow");
+        console.log(shadowOff);
+      }
+    </script>
+  </body>
+</html>
